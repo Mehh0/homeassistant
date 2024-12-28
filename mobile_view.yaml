@@ -1,0 +1,796 @@
+views:
+  - title: Home
+    cards:
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: back
+          - type: weather
+            entity: weather.forecast_abbotsdale_tower
+            show_conditions: true
+            show_temperature: true
+          - type: menu
+        alignment: justify
+      - type: custom:mushroom-title-card
+        title: Towers
+        alignment: center
+      - type: vertical-stack
+        cards:
+          - type: custom:mushroom-title-card
+            title: Abbotsdale
+            alignment: center
+            title_tap_action:
+              action: navigate
+              navigation_path: /mobile-dashboard/abbotsdale
+          - type: horizontal-stack
+            cards:
+              - type: custom:flex-horseshoe-card
+                card_mod: null
+                style: |
+                  ha-card {
+                  left: -31%;
+                  width: 132%;
+                  } 
+                entities:
+                  - entity: sensor.victron_solarcharger_pv_voltage_238
+                    decimals: 1
+                    icon: mdi:solar-power-variant
+                    name: Solar
+                    area: Abbotsdale
+                  - entity: sensor.victron_solarcharger_yield_power_238
+                    decimals: 0
+                    name: Power
+                  - entity: sensor.victron_solarcharger_pv_current_238
+                    decimals: 1
+                    name: Current
+                show:
+                  scale_tickmarks: true
+                  horseshoe_style: lineargradient
+                layout:
+                  hlines:
+                    - id: 0
+                      xpos: 50
+                      ypos: 41
+                      length: 70
+                      styles:
+                        - stroke: var(--primary-text-color);
+                        - stroke-width: 2;
+                        - opacity: 0.5;
+                        - stroke-linecap: round;
+                      color: '#FFF6E3'
+                  vlines:
+                    - id: 0
+                      xpos: 50
+                      ypos: 56
+                      length: 20
+                      styles:
+                        - stroke: var(--primary-text-color);
+                        - opacity: 0.5;
+                        - stroke-width: 2;
+                        - stroke-linecap: round;
+                  states:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 36
+                      styles:
+                        - font-size: 2.8em;
+                    - id: 1
+                      entity_index: 1
+                      xpos: 48
+                      ypos: 56
+                      styles:
+                        - font-size: 2.2em;
+                        - text-anchor: end;
+                        - font-style: normal;
+                        - opacity: 0.7;
+                    - id: 2
+                      entity_index: 2
+                      xpos: 52
+                      ypos: 56
+                      styles:
+                        - font-size: 2.2em;
+                        - text-anchor: start;
+                        - font-style: normal;
+                        - opacity: 0.7;
+                  names:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 94
+                      styles:
+                        - font-size: 1.5em;
+                        - text-transform: capitalize;
+                    - id: 1
+                      entity_index: 1
+                      xpos: 46
+                      ypos: 62
+                      styles:
+                        - font-size: 0.6em;
+                        - text-anchor: end;
+                        - opacity: 0.5;
+                        - text-transform: capitalize;
+                    - id: 2
+                      entity_index: 2
+                      xpos: 54
+                      ypos: 62
+                      styles:
+                        - font-size: 0.6em;
+                        - text-anchor: start;
+                        - opacity: 0.5;
+                        - text-transform: capitalize;
+                  areas:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 76
+                      styles:
+                        - font-size: 1.0em;
+                        - opacity: 0.7;
+                horseshoe_state:
+                  color: '#43a047'
+                horseshoe_scale:
+                  min: 29
+                  max: 100
+                  color: '#2e7031'
+                  width: 2
+                color_stops:
+                  '24.5': '#43a047'
+                  '26.7': '#32CD32'
+                  '28.4': '#ADFF2F'
+              - type: custom:flex-horseshoe-card
+                card_mod: null
+                style: |
+                  ha-card {
+                  left: -31%;
+                  width: 132%;
+                  } 
+                entities:
+                  - entity: sensor.victron_battery_voltage_238
+                    decimals: 1
+                    icon: mdi:solar-power-variant
+                    name: Batteries
+                    area: Abbotsdale
+                  - entity: sensor.victron_system_battery_power
+                    decimals: 0
+                    name: Power
+                  - entity: sensor.victron_battery_current_238
+                    decimals: 1
+                    name: Current
+                show:
+                  scale_tickmarks: true
+                  horseshoe_style: lineargradient
+                layout:
+                  hlines:
+                    - id: 0
+                      xpos: 50
+                      ypos: 41
+                      length: 70
+                      styles:
+                        - stroke: var(--primary-text-color);
+                        - stroke-width: 2;
+                        - opacity: 0.5;
+                        - stroke-linecap: round;
+                      color: '#FFF6E3'
+                  vlines:
+                    - id: 0
+                      xpos: 50
+                      ypos: 56
+                      length: 20
+                      styles:
+                        - stroke: var(--primary-text-color);
+                        - opacity: 0.5;
+                        - stroke-width: 2;
+                        - stroke-linecap: round;
+                  states:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 36
+                      styles:
+                        - font-size: 2.8em;
+                    - id: 1
+                      entity_index: 1
+                      xpos: 48
+                      ypos: 56
+                      styles:
+                        - font-size: 2.2em;
+                        - text-anchor: end;
+                        - font-style: normal;
+                        - opacity: 0.7;
+                    - id: 2
+                      entity_index: 2
+                      xpos: 52
+                      ypos: 56
+                      styles:
+                        - font-size: 2.2em;
+                        - text-anchor: start;
+                        - font-style: normal;
+                        - opacity: 0.7;
+                  names:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 94
+                      styles:
+                        - font-size: 1.5em;
+                        - text-transform: capitalize;
+                    - id: 1
+                      entity_index: 1
+                      xpos: 46
+                      ypos: 62
+                      styles:
+                        - font-size: 0.6em;
+                        - text-anchor: end;
+                        - opacity: 0.5;
+                        - text-transform: capitalize;
+                    - id: 2
+                      entity_index: 2
+                      xpos: 54
+                      ypos: 62
+                      styles:
+                        - font-size: 0.6em;
+                        - text-anchor: start;
+                        - opacity: 0.5;
+                        - text-transform: capitalize;
+                  areas:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 76
+                      styles:
+                        - font-size: 1.0em;
+                        - opacity: 0.7;
+                horseshoe_state:
+                  color: '#43a047'
+                horseshoe_scale:
+                  min: 24.2
+                  max: 28.4
+                  color: '#2e7031'
+                  width: 2
+                color_stops:
+                  '24.5': '#43a047'
+                  '26.7': '#32CD32'
+                  '28.4': '#ADFF2F'
+          - type: custom:mushroom-title-card
+            title: Boetie
+            title_tap_action:
+              action: navigate
+              navigation_path: /mobile-dashboard/boetie
+            alignment: center
+          - type: horizontal-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:flex-horseshoe-card
+                    card_mod: null
+                    style: |
+                      ha-card {
+                      left: -31%;
+                      width: 132%;
+                      } 
+                    entities:
+                      - entity: sensor.victron_solarcharger_pv_voltage_226
+                        decimals: 1
+                        icon: mdi:solar-power-variant
+                        name: Solar
+                        area: Boetie
+                      - entity: sensor.victron_solarcharger_yield_power_226
+                        decimals: 0
+                        name: Power
+                      - entity: sensor.victron_solarcharger_pv_current_226
+                        decimals: 1
+                        name: Current
+                    show:
+                      scale_tickmarks: true
+                      horseshoe_style: lineargradient
+                    layout:
+                      hlines:
+                        - id: 0
+                          xpos: 50
+                          ypos: 41
+                          length: 70
+                          styles:
+                            - stroke: var(--primary-text-color);
+                            - stroke-width: 2;
+                            - opacity: 0.5;
+                            - stroke-linecap: round;
+                          color: '#FFF6E3'
+                      vlines:
+                        - id: 0
+                          xpos: 50
+                          ypos: 56
+                          length: 20
+                          styles:
+                            - stroke: var(--primary-text-color);
+                            - opacity: 0.5;
+                            - stroke-width: 2;
+                            - stroke-linecap: round;
+                      states:
+                        - id: 0
+                          entity_index: 0
+                          xpos: 50
+                          ypos: 36
+                          styles:
+                            - font-size: 2.8em;
+                        - id: 1
+                          entity_index: 1
+                          xpos: 48
+                          ypos: 56
+                          styles:
+                            - font-size: 2.2em;
+                            - text-anchor: end;
+                            - font-style: normal;
+                            - opacity: 0.7;
+                        - id: 2
+                          entity_index: 2
+                          xpos: 52
+                          ypos: 56
+                          styles:
+                            - font-size: 2.2em;
+                            - text-anchor: start;
+                            - font-style: normal;
+                            - opacity: 0.7;
+                      names:
+                        - id: 0
+                          entity_index: 0
+                          xpos: 50
+                          ypos: 94
+                          styles:
+                            - font-size: 1.5em;
+                            - text-transform: capitalize;
+                        - id: 1
+                          entity_index: 1
+                          xpos: 46
+                          ypos: 62
+                          styles:
+                            - font-size: 0.6em;
+                            - text-anchor: end;
+                            - opacity: 0.5;
+                            - text-transform: capitalize;
+                        - id: 2
+                          entity_index: 2
+                          xpos: 54
+                          ypos: 62
+                          styles:
+                            - font-size: 0.6em;
+                            - text-anchor: start;
+                            - opacity: 0.5;
+                            - text-transform: capitalize;
+                      areas:
+                        - id: 0
+                          entity_index: 0
+                          xpos: 50
+                          ypos: 76
+                          styles:
+                            - font-size: 1.0em;
+                            - opacity: 0.7;
+                    horseshoe_state:
+                      color: '#43a047'
+                    horseshoe_scale:
+                      min: 29.4
+                      max: 100
+                      color: '#2e7031'
+                      width: 2
+                    color_stops:
+                      '24.5': '#43a047'
+                      '26.7': '#32CD32'
+                      '28.4': '#ADFF2F'
+                  - type: custom:flex-horseshoe-card
+                    card_mod: null
+                    style: |
+                      ha-card {
+                      left: -31%;
+                      width: 132%;
+                      } 
+                    entities:
+                      - entity: sensor.victron_solarcharger_battery_voltage_226
+                        decimals: 1
+                        icon: mdi:solar-power-variant
+                        name: Batteries
+                        area: Boetie
+                      - entity: sensor.victron_solarcharger_battery_current_226
+                        decimals: 1
+                        name: Current
+                    show:
+                      scale_tickmarks: true
+                      horseshoe_style: lineargradient
+                    layout:
+                      hlines:
+                        - id: 0
+                          xpos: 50
+                          ypos: 41
+                          length: 70
+                          styles:
+                            - stroke: var(--primary-text-color);
+                            - stroke-width: 2;
+                            - opacity: 0.5;
+                            - stroke-linecap: round;
+                          color: '#FFF6E3'
+                      vlines:
+                        - id: 0
+                          xpos: 50
+                          ypos: 56
+                          length: 20
+                          styles:
+                            - stroke: var(--primary-text-color);
+                            - opacity: 0.5;
+                            - stroke-width: 2;
+                            - stroke-linecap: round;
+                      states:
+                        - id: 0
+                          entity_index: 0
+                          xpos: 50
+                          ypos: 36
+                          styles:
+                            - font-size: 2.8em;
+                        - id: 1
+                          entity_index: 1
+                          xpos: 52
+                          ypos: 56
+                          styles:
+                            - font-size: 2.2em;
+                            - text-anchor: start;
+                            - font-style: normal;
+                            - opacity: 0.7;
+                      names:
+                        - id: 0
+                          entity_index: 0
+                          xpos: 50
+                          ypos: 94
+                          styles:
+                            - font-size: 1.5em;
+                            - text-transform: capitalize;
+                        - id: 1
+                          entity_index: 1
+                          xpos: 54
+                          ypos: 62
+                          styles:
+                            - font-size: 0.6em;
+                            - text-anchor: start;
+                            - opacity: 0.5;
+                            - text-transform: capitalize;
+                      areas:
+                        - id: 0
+                          entity_index: 0
+                          xpos: 50
+                          ypos: 76
+                          styles:
+                            - font-size: 1.0em;
+                            - opacity: 0.7;
+                    horseshoe_state:
+                      color: '#43a047'
+                    horseshoe_scale:
+                      min: 24.2
+                      max: 28.4
+                      color: '#2e7031'
+                      width: 2
+                    color_stops:
+                      '24.5': '#43a047'
+                      '26.7': '#32CD32'
+                      '28.4': '#ADFF2F'
+          - type: custom:mushroom-title-card
+            title: Skoonsig
+            alignment: center
+          - type: horizontal-stack
+            cards:
+              - type: custom:flex-horseshoe-card
+                card_mod: null
+                style: |
+                  ha-card {
+                  left: -31%;
+                  width: 132%;
+                  } 
+                entities:
+                  - entity: sensor.victron_solarcharger_pv_voltage_239
+                    decimals: 1
+                    icon: mdi:solar-power-variant
+                    name: Solar
+                    area: Skoonsig
+                  - entity: sensor.victron_solarcharger_yield_power_239
+                    decimals: 0
+                    name: Power
+                  - entity: sensor.victron_solarcharger_pv_current_239
+                    decimals: 1
+                    name: Current
+                show:
+                  scale_tickmarks: true
+                  horseshoe_style: lineargradient
+                layout:
+                  hlines:
+                    - id: 0
+                      xpos: 50
+                      ypos: 41
+                      length: 70
+                      styles:
+                        - stroke: var(--primary-text-color);
+                        - stroke-width: 2;
+                        - opacity: 0.5;
+                        - stroke-linecap: round;
+                      color: '#FFF6E3'
+                  vlines:
+                    - id: 0
+                      xpos: 50
+                      ypos: 56
+                      length: 20
+                      styles:
+                        - stroke: var(--primary-text-color);
+                        - opacity: 0.5;
+                        - stroke-width: 2;
+                        - stroke-linecap: round;
+                  states:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 36
+                      styles:
+                        - font-size: 2.8em;
+                    - id: 1
+                      entity_index: 1
+                      xpos: 48
+                      ypos: 56
+                      styles:
+                        - font-size: 2.2em;
+                        - text-anchor: end;
+                        - font-style: normal;
+                        - opacity: 0.7;
+                    - id: 2
+                      entity_index: 2
+                      xpos: 52
+                      ypos: 56
+                      styles:
+                        - font-size: 2.2em;
+                        - text-anchor: start;
+                        - font-style: normal;
+                        - opacity: 0.7;
+                  names:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 94
+                      styles:
+                        - font-size: 1.5em;
+                        - text-transform: capitalize;
+                    - id: 1
+                      entity_index: 1
+                      xpos: 46
+                      ypos: 62
+                      styles:
+                        - font-size: 0.6em;
+                        - text-anchor: end;
+                        - opacity: 0.5;
+                        - text-transform: capitalize;
+                    - id: 2
+                      entity_index: 2
+                      xpos: 54
+                      ypos: 62
+                      styles:
+                        - font-size: 0.6em;
+                        - text-anchor: start;
+                        - opacity: 0.5;
+                        - text-transform: capitalize;
+                  areas:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 76
+                      styles:
+                        - font-size: 1.0em;
+                        - opacity: 0.7;
+                horseshoe_state:
+                  color: '#43a047'
+                horseshoe_scale:
+                  min: 29.4
+                  max: 100
+                  color: '#2e7031'
+                  width: 2
+                color_stops:
+                  '24.5': '#43a047'
+                  '26.7': '#32CD32'
+                  '28.4': '#ADFF2F'
+              - type: custom:flex-horseshoe-card
+                card_mod: null
+                style: |
+                  ha-card {
+                  left: -31%;
+                  width: 132%;
+                  } 
+                entities:
+                  - entity: sensor.victron_solarcharger_battery_voltage_239
+                    decimals: 1
+                    icon: mdi:solar-power-variant
+                    name: Batteries
+                    area: Skoonsig
+                  - entity: sensor.victron_solarcharger_battery_current_239
+                    decimals: 1
+                    name: Current
+                show:
+                  scale_tickmarks: true
+                  horseshoe_style: lineargradient
+                layout:
+                  hlines:
+                    - id: 0
+                      xpos: 50
+                      ypos: 41
+                      length: 70
+                      styles:
+                        - stroke: var(--primary-text-color);
+                        - stroke-width: 2;
+                        - opacity: 0.5;
+                        - stroke-linecap: round;
+                      color: '#FFF6E3'
+                  vlines:
+                    - id: 0
+                      xpos: 50
+                      ypos: 56
+                      length: 20
+                      styles:
+                        - stroke: var(--primary-text-color);
+                        - opacity: 0.5;
+                        - stroke-width: 2;
+                        - stroke-linecap: round;
+                  states:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 36
+                      styles:
+                        - font-size: 2.8em;
+                    - id: 1
+                      entity_index: 1
+                      xpos: 52
+                      ypos: 56
+                      styles:
+                        - font-size: 2.2em;
+                        - text-anchor: start;
+                        - font-style: normal;
+                        - opacity: 0.7;
+                  names:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 94
+                      styles:
+                        - font-size: 1.5em;
+                        - text-transform: capitalize;
+                    - id: 1
+                      entity_index: 1
+                      xpos: 54
+                      ypos: 62
+                      styles:
+                        - font-size: 0.6em;
+                        - text-anchor: start;
+                        - opacity: 0.5;
+                        - text-transform: capitalize;
+                  areas:
+                    - id: 0
+                      entity_index: 0
+                      xpos: 50
+                      ypos: 76
+                      styles:
+                        - font-size: 1.0em;
+                        - opacity: 0.7;
+                horseshoe_state:
+                  color: '#43a047'
+                horseshoe_scale:
+                  min: 24.2
+                  max: 28.4
+                  color: '#2e7031'
+                  width: 2
+                color_stops:
+                  '24.5': '#43a047'
+                  '26.7': '#32CD32'
+                  '28.4': '#ADFF2F'
+    theme: Mushroom
+  - path: abbotsdale
+    title: Abbotsdale
+    cards:
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: back
+          - type: weather
+            entity: weather.forecast_abbotsdale_tower
+            show_conditions: true
+            show_temperature: true
+          - type: menu
+        alignment: justify
+    badges: []
+  - title: boetie
+    path: boetie
+    cards:
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: back
+          - type: weather
+            entity: weather.forecast_boetie_tower
+            show_conditions: true
+            show_temperature: true
+          - type: menu
+        alignment: justify
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-entity-card
+                entity: sensor.victron_solarcharger_pv_voltage_226
+                name: Solar Voltage
+                layout: vertical
+              - type: custom:mushroom-entity-card
+                entity: sensor.victron_solarcharger_pv_current_226
+                name: Solar Current
+                layout: vertical
+              - type: custom:mushroom-entity-card
+                entity: sensor.victron_solarcharger_yield_power_226
+                layout: vertical
+                name: Solar Power
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.victron_solarcharger_yield_today_226
+            name: Solar Yield Today
+            show:
+              graph: bar
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.victron_solarcharger_yield_yesterday_226
+            name: Solar Yield Yesterday
+            show:
+              graph: bar
+        title: MPPT Solar charger
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-entity-card
+                entity: sensor.victron_solarcharger_battery_voltage_226
+                layout: vertical
+                name: Battery Bank Voltage
+        title: 'Battery '
+  - title: Lodewyk
+    path: lodewyk
+    cards:
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: back
+          - type: weather
+            entity: weather.forecast_lodewyk
+            show_conditions: true
+            show_temperature: true
+          - type: menu
+        alignment: justify
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-entity-card
+                entity: sensor.victron_solarcharger_pv_voltage_224
+                name: Solar Voltage
+                layout: vertical
+              - type: custom:mushroom-entity-card
+                entity: sensor.victron_solarcharger_pv_current_238
+                name: Solar Current
+                layout: vertical
+              - type: custom:mushroom-entity-card
+                entity: sensor.victron_solarcharger_yield_power_224
+                layout: vertical
+                name: Solar Power
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.victron_solarcharger_yield_today_224
+            name: Solar Yield Today
+            show:
+              graph: bar
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.victron_solarcharger_yield_yesterday_224
+            name: Solar Yield Yesterday
+            show:
+              graph: bar
+        title: MPPT Solar charger
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:mushroom-entity-card
+                entity: sensor.victron_solarcharger_battery_voltage_224
+                layout: vertical
+                name: Battery Bank Voltage
+        title: 'Battery '
